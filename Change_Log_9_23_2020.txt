@@ -1,0 +1,14 @@
+Simons_Block Prefab has been created and scripted. Is capable of woring with any door or wall, provided you choose
+the object in the Unity's inspector. It's main script is GameController, but its parts use ButtonB and Door_Controller.
+
+Simons_Blocks is composed of 4 black cube that each have a colored point light ajacent to their surface.
+Each light has a animation that will flash its color aganist the block, giving the "button" a glow.
+In the center is the white cube that allows for doors to be moved. This will activate when he puzle has been solved twice
+and the block has been shot after winning twice.
+
+Simons_Blocks has been designed to use the LeanTween's sound assest to make the designated beeps.
+This can be altered, provided you have the sound files in the same folders as the project and write the correct code for them.
+
+Further details for how the scripts work can be found as comments inside of the script.
+Details for how the animation and "buttons" are set up can be found either as photos and videos in the discord channel
+or you can ask me , Ledarrius, personally.
