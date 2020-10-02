@@ -9,17 +9,14 @@ public class Door_Controller : MonoBehaviour
 {	
 	public GameObject Door;
 	public bool doorIsOpening;
-	public Animator anim;
 	
 	
 	void Update() {  // moves the door up by 5 up in the y vector.
 		if (doorIsOpening == true){
 			Door.transform.Translate (Vector3.up * Time.deltaTime * 5);
-			anim.enabled = true;
-			anim.SetTrigger("up");
 		//if doorIsOpening is true, then open the door
 		}
-		if (Door.transform.position.y > 5f ){
+		if (Door.transform.position.y > 7f ){
 			doorIsOpening = false;
 		// If the door is already open, leave it alone.
 		}
@@ -27,7 +24,7 @@ public class Door_Controller : MonoBehaviour
 	}
 	
 	void OnMouseDown(){ // activates the door moving
-		if(GameController.Instance.needed == 2){
+		if(GameController.Instance.needed == GameController.Instance.win){
 			doorIsOpening = true;
 		}
 	}

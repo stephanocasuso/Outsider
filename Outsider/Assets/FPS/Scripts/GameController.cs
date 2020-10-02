@@ -27,8 +27,8 @@ public class GameController : MonoBehaviour{
 		Instance = this;
 		
 		simonMax = 3;
-		simonTime = 0.5f;
-		win = 2;
+		simonTime = 1.0f;
+		win = 1;
 		StartCoroutine(SimonSays());
 
 	}
@@ -79,7 +79,7 @@ public class GameController : MonoBehaviour{
 	
 	IEnumerator SimonSays() // determines the beep order and allows for the player to have their turn
 	{
-		if (needed == win){
+		if (needed >= win){
 			yield break;
 		}
 		Debug.Log("Prepare");
@@ -90,7 +90,7 @@ public class GameController : MonoBehaviour{
 
 		for (int i = 0; i < simonMax; i++)
 		{
-			int rand = Random.Range(0, 4);
+			int rand = Random.Range(0, 3);
 			simonList.Add(rand);
 			PlayAudio(rand);
 			btns[rand].Action();
