@@ -66,7 +66,7 @@ public class PlayerWeaponsManager : MonoBehaviour
     public UnityAction<WeaponController, int> onAddedWeapon;
     public UnityAction<WeaponController, int> onRemovedWeapon;
 
-    WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots
+    public WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots
     PlayerInputHandler m_InputHandler;
     PlayerCharacterController m_PlayerCharacterController;
     float m_WeaponBobFactor;

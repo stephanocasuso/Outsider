@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - CM
+  - BuckShot
+  - Launcher
+  - FlyAway
+  - Load
   layers:
   - Default
   - TransparentFX
