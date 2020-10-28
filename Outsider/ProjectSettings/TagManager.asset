@@ -5,10 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - CM
+<<<<<<< Updated upstream
   - BuckShot
   - Launcher
   - FlyAway
   - Load
+=======
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -18,9 +21,15 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< Updated upstream
   - PostProcessing
   - CheckPoint
   - FirstPersonWeapon
+=======
+  - Post-Processing
+  - CheckPoint
+  - 
+>>>>>>> Stashed changes
   - 
   - 
   - 
