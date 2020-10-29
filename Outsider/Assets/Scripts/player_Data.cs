@@ -11,10 +11,6 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class player_Data : MonoBehaviour{
   private CheckPointMaster cpm; //Was private CheckpointMaster cpm on 10/26/2020 at 3:00PM. Last time it worked.
-  public bool Shotgun;
-  public bool Launcher;
-  public bool JetPack; 
-  public float Health; 
   public float[] position;
   //public string pathway = Application.dataPath;
   public int saved = 1;
@@ -23,10 +19,9 @@ public class player_Data : MonoBehaviour{
     {
 	cpm = GameObject.FindGameObjectWithTag("CM").GetComponent<CheckPointMaster>();
 	saved = 1;
-        Save save = new Save(cpm.Shotgun_TakenC,cpm.Launcher_TakenC, cpm.JetPack_TakenC, cpm.last_health, cpm.lastCheckPointPos.x, cpm.lastCheckPointPos.y, cpm.lastCheckPointPos.z){};
+        Save save = new Save(cpm.lastCheckPointPos.x, cpm.lastCheckPointPos.y, cpm.lastCheckPointPos.z){};
 
         string JsonString = JsonUtility.ToJson(save);//Convert SAVE Object into JSON(String)
-	Debug.Log(save.Shotgun1);
 
         StreamWriter sw = new StreamWriter(Application.dataPath + "/JSONData.text");//Application.persistentDataPath + "/JSONData.text"
         sw.Write(JsonString);
@@ -46,10 +41,6 @@ public class player_Data : MonoBehaviour{
       sr.Close();
       Save save = JsonUtility.FromJson<Save>(JsonString);//Into the Save Object
       Debug.Log("-LOADED-");
-      Shotgun = save.Shotgun1;
-      Launcher = save.Launcher1;
-      JetPack = save.JetPack1;
-      Health = save.Health1;
       position[0] = save.position0;
       position[1] = save.position1;
       position[2] = save.position2;
@@ -67,18 +58,11 @@ public class player_Data : MonoBehaviour{
     [Serializable]
     public class Save
     {
-	public bool Shotgun1;
-	public bool Launcher1;
-	public bool JetPack1;
-	public float Health1;
+
 	public float position0;
 	public float position1;
 	public float position2;
-	public Save(bool shot, bool lau, bool jet, float hea, float x, float y, float z) { 
-          Shotgun1 = shot;
-	  Launcher1 = lau;
-	  JetPack1 = jet;
-	  Health1 = hea;
+	public Save(float x, float y, float z) { 
           position0 = x;
           position1 = y;
           position2 = z;
