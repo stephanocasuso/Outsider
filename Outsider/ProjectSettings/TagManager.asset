@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - Projectile
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -13,7 +18,12 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< Updated upstream
   - PostProcessing
+=======
+  - Post-Processing
+  - 
+>>>>>>> Stashed changes
   - 
   - FirstPersonWeapon
   - 
